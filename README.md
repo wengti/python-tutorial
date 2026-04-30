@@ -16,3 +16,14 @@ python -m PyInstaller <file_path> --onefile --windowed --clean <name.exe>
 Note:
     - the module is installed as `pyinstaller`
     - However, to run it it is spelt in `PyInstaller`
+
+
+2. How to run the app? (Assuming you are in the root folder of these apps)
+- Deployed on Streamlit: https://wwt-py-todo.streamlit.app/
+- Local development: `python -m streamlit run web.py`
+- .exe file: `python -m PyInstaller.... (refer to above)` -> execute the .exe file in dist
+- command line interface: `python -m cli`
+
+3. Deployment on streamlit
+- has issue with `+cpu` from `pytorch` in `requirements.txt`
+- try to remove that to resolve it.
