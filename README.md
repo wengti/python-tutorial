@@ -27,3 +27,7 @@ Note:
 3. Deployment on streamlit
 - has issue with `+cpu` from `pytorch` in `requirements.txt`
 - try to remove that to resolve it.
+
+
+### 3.1 Nasa Website
+* Deployment: https://wt-nasa-website.streamlit.app/
