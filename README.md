@@ -173,6 +173,20 @@ def home():
 </body>
 ```
 
+6. Catch error in Flask
+```python
+from Flask import abort, jsonify
+@app.routes("/")
+def home():
+    abort(404, description="Invalid")
+
+@app.errorhandler(404)
+def handle_not_found(e):
+    return jsonify(error=str(e)), 404
+```
+
+7. How to start the development of Flask App with hot-reloading
+`$ flask --app hello run --debug`
 
 ### 6.2 Jupyter-Pandas
 1. When using read csv files that has irrelevant rows beforehand, make use of the `skip_rows` argument.
