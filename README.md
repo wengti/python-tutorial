@@ -4,6 +4,7 @@
 ## Note:
 
 ### 1: Todo-List, 1.1: Zip-Gui
+==============================
 1. How to make a .exe file?
 ```bash
 python -m PyInstaller <file_path> --onefile --windowed --clean <name.exe>
