@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API</title>
+</head>
+<body>
+    <h1>Weather Data API!</h1>
+    <img src="{{url_for('static', filename='icon.png')}}" />
+    <p>Getting data of a specific location at a specific date: http://127.0.0.1:5000/10/20000806</p>
+    <p>Getting data of a specific location at a specific year: http://127.0.0.1:5000/year/10/2000</p>
+    <p>Getting data of a specific location: http://127.0.0.1:5000/10</p>
+    <div>
+        {{list_table | safe}}
+    </div>
+    
+</body>
+</html>
