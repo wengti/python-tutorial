@@ -3,8 +3,9 @@
 
 ## Note:
 
-### 1: Todo-List, 1.1: Zip-Gui
 ==============================
+### 1: Todo-List, 1.1: Zip-Gui
+
 1. How to make a .exe file?
 ```bash
 python -m PyInstaller <file_path> --onefile --windowed --clean <name.exe>
@@ -29,11 +30,11 @@ Note:
 - has issue with `+cpu` from `pytorch` in `requirements.txt`
 - try to remove that to resolve it.
 
-
+====================
 ### 3.1 Nasa-Website
 * Deployment: https://wt-nasa-website.streamlit.app/
 
-
+====================
 ### 5.0 AI-Agent-Chat
 1. Local LLM using **ollama**
 * Setup guide: https://docs.langchain.com/oss/python/integrations/chat/ollama
@@ -107,7 +108,7 @@ demo.launch()
 * By default `fn` in `ChatInterface` takes in 2 arguments: `message` and `history`
 * use `gr.state` to pass in additional_inputs to the `fn` of `ChatInterface`, which is a unique uuid to isolate conversation instances.
 
-
+=============================================
 ### 6.0 Flask-Weather-API, 6.1 Flask-Dict-API
 1. Simple startup example:
 * References: https://flask.palletsprojects.com/en/stable/quickstart/
@@ -189,6 +190,7 @@ def handle_not_found(e):
 7. How to start the development of Flask App with hot-reloading
 `$ flask --app hello run --debug`
 
+======================
 ### 6.2 Jupyter-Pandas
 1. When using read csv files that has irrelevant rows beforehand, make use of the `skip_rows` argument.
 ```python
