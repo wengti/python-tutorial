@@ -285,3 +285,31 @@ df.loc[df["    DATE"] == "1860-01-01", "   TG"].squeeze().item()
 
 df_new = df[df["date"].dt.year === 2020]
 ```
+
+==================================
+### 7.0 Weather-Forecast-Dashboard
+* Deployment: https://wt-st-weather-forecast.streamlit.app/
+
+1. Error handling with `requests` python library:
+* Backend - Return the entire error object
+```python
+def get_data(place):
+    try:
+        response = requests.get(
+            f"https://api.openweathermap.org/data/2.5/forecast?q={place}&appid={api_key}&units=metric"
+        )
+        response.raise_for_status()
+        data = response.json()
+        return {"data": data, "error": None}
+    except requests.exceptions.HTTPError as err:
+        return {"data": None, "error": err}
+```
+
+* Frontend - Display the error using `.response.status_code` and `.response.reason` from `HTTPError` object.
+```python
+result = get_data(place)
+if result["error"]:
+    st.write(
+        f":red[Error: {result["error"].response.status_code}: {result["error"].response.reason}]"
+    )
+```
