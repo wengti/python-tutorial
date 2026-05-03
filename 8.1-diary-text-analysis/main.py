@@ -1,10 +1,13 @@
 from datetime import datetime
 import os
 import streamlit as st
+import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import re
 import pandas as pd
 import plotly.express as px
+
+nltk.download("vader_lexicon")
 
 if not os.path.exists("data.txt"):
     with open("data.txt", "w") as f:
