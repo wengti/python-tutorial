@@ -313,3 +313,6 @@ if result["error"]:
         f":red[Error: {result["error"].response.status_code}: {result["error"].response.reason}]"
     )
 ```
+
+### 8.1 Diary-Text-Analysis
+* Deployment: https://diary-mood-analysis.streamlit.app/
